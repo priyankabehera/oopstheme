@@ -5,3 +5,8 @@
  * @since 1.0
  */
 
+
+/**
+ * Implement the main class file.
+ */
+require get_template_directory() . '/includes/class-oopstheme.php';
