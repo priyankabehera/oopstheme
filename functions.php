@@ -9,11 +9,16 @@
 /**
  * Implement the main class file.
  */
-require get_template_directory() . '/includes/class-oopstheme.php';
+//require get_template_directory() . '/includes/class-oopstheme.php';
 
 /**
  * Include setup class file.
  */
 require get_template_directory() . '/includes/classes/backend/class-setup.php';
+
+/**
+ * Include class OOPS_Widget file.
+ */
+require get_template_directory() . '/includes/classes/backend/class-oops-widget.php';
 
 

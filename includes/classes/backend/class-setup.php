@@ -14,6 +14,7 @@ class Setup {
 
 	public function __construct() {
 		add_action( 'after_setup_theme', array( $this, 'doSetup' ) );
+		add_action( 'widgets_init', array( $this, 'doWidget' ) );
 	}
 
 	public function doSetup(){
@@ -25,4 +26,7 @@ class Setup {
 			'copyright' => esc_html__( 'Footer Copyright Menu', 'minilicious' ),
 		) );
 	}
+
 }
+
+$setup_obj = new Setup();
