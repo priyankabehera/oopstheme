@@ -37,7 +37,7 @@ class OopsTheme {
 	 *
 	 * @since 1.0
 	 */
-	function __construct() {
+	public function __construct() {
 	}
 
 	/**
@@ -50,7 +50,7 @@ class OopsTheme {
 	 * @param $function_to_add string
 	 * @param $hook_arg   array
 	 */
-	function registerHooks( $hook, $tag, $function_to_add, $hook_arg ) {
+	public function registerHooks( $hook, $tag, $function_to_add, $hook_arg ) {
 
 		if ( 'action' === $hook ) {
 			$this->addActions( $tag, $function_to_add, $hook_arg );
@@ -69,7 +69,7 @@ class OopsTheme {
 	 * @param $function_to_add
 	 * @param $hook_arg
 	 */
-	function addActions( $tag, $function_to_add, $hook_arg ) {
+	public function addActions( $tag, $function_to_add, $hook_arg ) {
 
 		$additional_arg = $this->implodeArray( ',', $hook_arg );
 		add_action( $tag, $function_to_add, $additional_arg );
@@ -84,7 +84,7 @@ class OopsTheme {
 	 * @param $function_to_add
 	 * @param $hook_arg
 	 */
-	function addFilters( $tag, $function_to_add, $hook_arg ) {
+	public function addFilters( $tag, $function_to_add, $hook_arg ) {
 
 	}
 
@@ -98,7 +98,7 @@ class OopsTheme {
 	 *
 	 * @return string
 	 */
-	function implodeArray( $glue, $hook_arg ) {
+	public function implodeArray( $glue, $hook_arg ) {
 		$hook_string = implode( $glue, $hook_arg );
 
 		return $hook_string;
