@@ -25,3 +25,5 @@ class OOPS_Widget{
 	}
 
 }
+
+$oops_widget_obj = new OOPS_Widget();
