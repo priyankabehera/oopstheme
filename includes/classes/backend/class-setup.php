@@ -14,7 +14,6 @@ class Setup {
 
 	public function __construct() {
 		add_action( 'after_setup_theme', array( $this, 'doSetup' ) );
-		add_action( 'widgets_init', array( $this, 'doWidget' ) );
 	}
 
 	public function doSetup(){
