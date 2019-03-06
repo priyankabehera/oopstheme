@@ -60,6 +60,8 @@ class OopsTheme {
 
 	}
 
+	abstract function assa();
+
 	/**
 	 * Function to add actions.
 	 *

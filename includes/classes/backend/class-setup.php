@@ -10,13 +10,13 @@
  *
  * @since 1.0.0
  */
-class Setup {
+class Setup extends OOPS_Actions{
 
 	public function __construct() {
-		add_action( 'after_setup_theme', array( $this, 'doSetup' ) );
+		add_action( 'after_setup_theme', array( $this, 'addCallback' ) );
 	}
 
-	public function doSetup(){
+	public function addCallback(){
 
 		register_nav_menus( array(
 			'menu-1'    => esc_html__( 'Primary', 'minilicious' ),

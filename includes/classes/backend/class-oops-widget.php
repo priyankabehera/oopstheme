@@ -6,13 +6,13 @@
 /**
  * Class OOPS_Widget
  */
-class OOPS_Widget{
+class OOPS_Widget extends OOPS_Actions {
 
 	public function __construct() {
-		add_action( 'widgets_init', array( $this, 'doWidget' ) );
+		add_action( 'widgets_init', array( $this, 'addCallback' ) );
 	}
 
-	public function doWidget(){
+	public function addCallback(){
 		register_sidebar( array(
 			'name'          => esc_html__( 'Sidebar', 'minilicious' ),
 			'id'            => 'sidebar-1',
